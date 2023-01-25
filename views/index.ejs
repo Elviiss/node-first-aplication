@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include("partials/head") %> 
+  </head>
+  <body>
+    <%- include('partials/navigation') %> 
+
+    
+    <!-- MAIN CONTENT -->
+    <header class="container vh-100 d-flex justify-content-center align-items-center">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <img src="/images/bart.png" class="w-25">
+        <h1 class="display-2 my-5 text-uppercase fw-bold">Nude Express</h1>
+        <a href="/about" class="btn btn-primary w-25">About</a>
+      </div>
+    </header>
+    <%- include('partials/footer.ejs') %> 
+  </body>
+</html>
