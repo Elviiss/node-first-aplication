@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Pruebas</title>
     <%- include("partials/head") %>
   </head>
   <body>
     <%- include('partials/navigation') %> 
 
-    <div class="container p-4">
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <div class="card-body">
-            <form action="/send" method="POST">
-              <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Introduce tu email..." autofocus>
+      <div class="container vh-100 d-flex justify-content-center align-items-center">
+        <div class="card bg-dark text-center text-white">
+          <div class="card-header">
+            <h3>Contact me</h3>
+          </div>
+          <div class="card-body text-start">
+            <form action="/contact" method="POST">
+              <div class="mb-3">
+                <label for="email">Email</label>
+                <input name="email" type="email" class="form-control" placeholder="Introduce tu email..." autofocus>
               </div>
-              <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Nombre...">
+              <div class="mb-3">
+                <label for="message">Mensaje:</label>
+                <textarea name="message" class="form-control" rows="3" placeholder="Mensaje..."></textarea>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Numero">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" rows="3" placeholder="Mensaje..."></textarea>
-              </div>
-              <button type="submit" id="boton_enviar" class="btn btn-primary">Enviar</button>
+              <button type="submit" class="btn btn-primary col-12">Enviar</button>
             </form>
           </div>
         </div>
       </div>
-    </div>
   </body>
 </html>
