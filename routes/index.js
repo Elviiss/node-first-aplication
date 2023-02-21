@@ -10,6 +10,11 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact' });
 });
 
+router.get('/send', (req, res) => {
+  console.log(req.body)
+  res.send("recibido")
+})
+
 router.get('/about', function(req, res, next) {
   res.render('about', { title: 'About' });
 });
