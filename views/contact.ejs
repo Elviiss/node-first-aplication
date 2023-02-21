@@ -2,10 +2,32 @@
 <html>
   <head>
     <title><%= title %></title>
+    <%- include("partials/head") %>
   </head>
   <body>
     <%- include('partials/navigation') %> 
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header bg-dark text-white">
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduce tu email...">
+            </div>
+            <div class="card-header bg-dark text-white">
+            <div class="card-header bg-dark text-white">
+                <input type="text" class="form-control" placeholder="Nombre...">
+            </div>
+            <div class="card-header bg-dark text-white">
+              <input type="text" class="form-control" placeholder="Numero">
+            </div>
+            <div class="card-header bg-dark text-white">
+              <textarea class="form-control" rows="3" placeholder="Mensaje..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
